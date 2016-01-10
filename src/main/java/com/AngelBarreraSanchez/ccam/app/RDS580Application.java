@@ -13,6 +13,7 @@ import com.AngelBarreraSanchez.ccam.scrapper.impl.FC003;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Helala0;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Maniaforu;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.New0;
+import com.AngelBarreraSanchez.ccam.scrapper.impl.Zetita;
 
 /**
  * The main class. 
@@ -33,7 +34,6 @@ public class RDS580Application {
 		}
 		Set<CCCAMEntity> clines = new HashSet<>();
 		
-		
 		FreeClinesScrapper maniaforu = new Maniaforu(DEFAULT_HOPES);
 		clines.addAll(maniaforu.getLines());
 		
@@ -51,6 +51,9 @@ public class RDS580Application {
 		
 		FreeClinesScrapper cccamgenerator = new Cccamgenerator(DEFAULT_HOPES);
 		clines.addAll(cccamgenerator.getLines());
+		
+		FreeClinesScrapper zetita = new Zetita(DEFAULT_HOPES);
+		clines.addAll(zetita.getLines());
 		
 		CCCAMFileGenerator fileGen = new RDS580CCCAMFileGenerator();
 		fileGen.generateFile(clines, args[0]);
