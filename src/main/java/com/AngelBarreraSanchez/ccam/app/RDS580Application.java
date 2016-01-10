@@ -47,8 +47,8 @@ public class RDS580Application {
 //		FreeClinesScrapper new0 = new New0(DEFAULT_HOPES);
 //		clines.addAll(new0.getLines());
 		
-		FreeClinesScrapper fc003 = new FC003(DEFAULT_HOPES);
-		clines.addAll(fc003.getLines());
+//		FreeClinesScrapper fc003 = new FC003(DEFAULT_HOPES);
+//		clines.addAll(fc003.getLines());
 		
 		FreeClinesScrapper cccamgenerator = new Cccamgenerator(DEFAULT_HOPES);
 		clines.addAll(cccamgenerator.getLines());
