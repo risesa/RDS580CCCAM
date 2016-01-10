@@ -41,12 +41,12 @@ public class RDS580Application {
 		FreeClinesScrapper allCccam = new AllCccam(DEFAULT_HOPES);
 		clines.addAll(allCccam.getLines());
 		
-		FreeClinesScrapper helala0 = new Helala0(DEFAULT_HOPES);
-		clines.addAll(helala0.getLines());
+//		FreeClinesScrapper helala0 = new Helala0(DEFAULT_HOPES);
+//		clines.addAll(helala0.getLines());
 		
 		//SEEMS NOT TO WORK. TEST IT PLEASE
-//		FreeClinesScrapper new0 = new New0(DEFAULT_HOPES);
-//		clines.addAll(new0.getLines());
+		FreeClinesScrapper new0 = new New0(DEFAULT_HOPES);
+		clines.addAll(new0.getLines());
 //		FreeClinesScrapper fc003 = new FC003(DEFAULT_HOPES);
 //		clines.addAll(fc003.getLines());
 		
