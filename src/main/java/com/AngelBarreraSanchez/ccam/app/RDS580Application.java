@@ -14,6 +14,7 @@ import com.AngelBarreraSanchez.ccam.scrapper.impl.Helala0;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Maniaforu;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Mycccam24;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.New0;
+import com.AngelBarreraSanchez.ccam.scrapper.impl.Shashatv;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Zetita;
 
 /**
@@ -59,6 +60,9 @@ public class RDS580Application {
 		
 		FreeClinesScrapper mycccam24 = new Mycccam24(DEFAULT_HOPES);
 		clines.addAll(mycccam24.getLines());
+		
+		FreeClinesScrapper shashatv = new Shashatv(DEFAULT_HOPES);
+		clines.addAll(shashatv.getLines());
 		
 		CCCAMFileGenerator fileGen = new RDS580CCCAMFileGenerator();
 		fileGen.generateFile(clines, args[0]);
