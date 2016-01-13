@@ -13,11 +13,11 @@ import com.AngelBarreraSanchez.ccam.scrapper.FreeClinesScrapper;
 
 /**
  * Implementation of FreeClinesScrapper
- * Get a Cline from http://cccam-free.com/helala0.php
+ * Get a Cline from http://call-share.ddns.net/zimany/index.php";
  * @author Angel Barrera Sanchez
  */
 public class Zetita implements FreeClinesScrapper {
-	private String BASE_URL = "http://call-share.ddns.net/zetita/index.php";
+	private String BASE_URL = "http://call-share.ddns.net/zimany/index.php";
 	private String default_hops;
 	
 	private Zetita(){}
