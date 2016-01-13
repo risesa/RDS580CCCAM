@@ -35,7 +35,7 @@ public class Helala0 implements FreeClinesScrapper {
 	public Set<CCCAMEntity> getLines() {
 		Set<CCCAMEntity> clines = new HashSet<CCCAMEntity>();
 		try {
-			Response res = Jsoup.connect(BASE_URL)
+			Response res = Jsoup.connect(BASE_URL).timeout(30000)
 				.userAgent("Mozilla/5.0 (Windows NT 10.0; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0")
 				.method(Method.GET)
 				.execute();	

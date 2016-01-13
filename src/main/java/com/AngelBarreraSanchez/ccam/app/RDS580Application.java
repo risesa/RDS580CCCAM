@@ -47,8 +47,8 @@ public class RDS580Application {
 		//new0 and helala0 sometimes fails... TEST IT PLEASE
 		FreeClinesScrapper new0 = new New0(DEFAULT_HOPES);
 		clines.addAll(new0.getLines());
-//		FreeClinesScrapper helala0 = new Helala0(DEFAULT_HOPES);
-//		clines.addAll(helala0.getLines());
+		FreeClinesScrapper helala0 = new Helala0(DEFAULT_HOPES);
+		clines.addAll(helala0.getLines());
 		
 		//SEEMS NOT TO WORK. TEST IT PLEASE
 //		FreeClinesScrapper fc003 = new FC003(DEFAULT_HOPES);
