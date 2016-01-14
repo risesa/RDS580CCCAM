@@ -61,7 +61,7 @@ public class BambooCCcam implements FreeClinesScrapper {
 			
 			String username = System.currentTimeMillis()+"";
 			//LAST 6 numbers, pseudo random
-			username = username.substring(username.length()-6);
+			username = "A" + username.substring(username.length()-6) + "Z";
 			final String pass = "RDS580";
 			
 			res = Jsoup.connect(BASE_URL)
