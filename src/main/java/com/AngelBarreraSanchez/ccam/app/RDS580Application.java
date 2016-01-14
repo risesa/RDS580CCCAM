@@ -64,6 +64,7 @@ public class RDS580Application {
 		FreeClinesScrapper mycccam24 = new Mycccam24(DEFAULT_HOPES);
 		clines.addAll(mycccam24.getLines());
 		
+		//INI - SEEMS TO DONT WORK
 		FreeClinesScrapper shashatv = new Shashatv(DEFAULT_HOPES);
 		clines.addAll(shashatv.getLines());
 		
@@ -72,6 +73,7 @@ public class RDS580Application {
 		
 		FreeClinesScrapper cgenerator = new Cgenerator(DEFAULT_HOPES);
 		clines.addAll(cgenerator.getLines());
+		//END - SEEMS TO DONT WORK
 		
 		FreeClinesScrapper bambooCCcam = new BambooCCcam(DEFAULT_HOPES);
 		clines.addAll(bambooCCcam.getLines());
