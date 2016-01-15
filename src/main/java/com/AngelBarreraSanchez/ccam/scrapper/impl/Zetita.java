@@ -17,7 +17,7 @@ import com.AngelBarreraSanchez.ccam.scrapper.FreeClinesScrapper;
  * @author Angel Barrera Sanchez
  */
 public class Zetita implements FreeClinesScrapper {
-	private String BASE_URL = "http://call-share.ddns.net/ziyamas/index.php";
+	private String BASE_URL = "http://call-share.ddns.net/zamoud/index.php";
 	private String default_hops;
 	
 	private Zetita(){}
