@@ -52,8 +52,8 @@ public class RDS580Application {
 		clines.addAll(helala0.getLines());
 		
 		//SEEMS NOT TO WORK. TEST IT PLEASE
-//		FreeClinesScrapper fc003 = new FC003(DEFAULT_HOPES);
-//		clines.addAll(fc003.getLines());
+		FreeClinesScrapper fc003 = new FC003(DEFAULT_HOPES);
+		clines.addAll(fc003.getLines());
 		
 		FreeClinesScrapper cccamgenerator = new Cccamgenerator(DEFAULT_HOPES);
 		clines.addAll(cccamgenerator.getLines());
