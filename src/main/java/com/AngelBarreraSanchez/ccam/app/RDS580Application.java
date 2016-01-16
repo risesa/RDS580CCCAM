@@ -17,6 +17,7 @@ import com.AngelBarreraSanchez.ccam.scrapper.impl.Helala0;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Maniaforu;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Mycccam24;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.New0;
+import com.AngelBarreraSanchez.ccam.scrapper.impl.Sat2arab;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Shashatv;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Zetita;
 
@@ -77,6 +78,9 @@ public class RDS580Application {
 		
 		FreeClinesScrapper bambooCCcam = new BambooCCcam(DEFAULT_HOPES);
 		clines.addAll(bambooCCcam.getLines());
+		
+		FreeClinesScrapper sat2arab = new Sat2arab(DEFAULT_HOPES);
+		clines.addAll(sat2arab.getLines());
 		
 		CCCAMFileGenerator fileGen = new RDS580CCCAMFileGenerator();
 		fileGen.generateFile(clines, args[0]);
