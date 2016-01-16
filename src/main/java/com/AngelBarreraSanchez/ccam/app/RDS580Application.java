@@ -1,7 +1,7 @@
 package com.AngelBarreraSanchez.ccam.app;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.AngelBarreraSanchez.ccam.CCCAMEntity;
 import com.AngelBarreraSanchez.ccam.fileGenerator.CCCAMFileGenerator;
@@ -38,7 +38,7 @@ public class RDS580Application {
 			System.err.println("Only need 1 parameter. The output path.");
 			System.exit(-1);
 		}
-		Set<CCCAMEntity> clines = new HashSet<>();
+		List<CCCAMEntity> clines = new ArrayList<>();
 		
 		FreeClinesScrapper maniaforu = new Maniaforu(DEFAULT_HOPES);
 		clines.addAll(maniaforu.getLines());
@@ -46,35 +46,39 @@ public class RDS580Application {
 		FreeClinesScrapper allCccam = new AllCccam(DEFAULT_HOPES);
 		clines.addAll(allCccam.getLines());
 		
-		//new0 and helala0 sometimes fails... TEST IT PLEASE
+		//FAILING AT 16/01/2016
 		FreeClinesScrapper new0 = new New0(DEFAULT_HOPES);
 		clines.addAll(new0.getLines());
+		
+		//FAILING AT 16/01/2016
 		FreeClinesScrapper helala0 = new Helala0(DEFAULT_HOPES);
 		clines.addAll(helala0.getLines());
 		
-		//SEEMS NOT TO WORK. TEST IT PLEASE
 		FreeClinesScrapper fc003 = new FC003(DEFAULT_HOPES);
 		clines.addAll(fc003.getLines());
 		
 		FreeClinesScrapper cccamgenerator = new Cccamgenerator(DEFAULT_HOPES);
 		clines.addAll(cccamgenerator.getLines());
 		
+		//IT CHANGES EVERY DAY THE URL
 		FreeClinesScrapper zetita = new Zetita(DEFAULT_HOPES);
 		clines.addAll(zetita.getLines());
 		
+		//FAILING AT 16/01/2016
 		FreeClinesScrapper mycccam24 = new Mycccam24(DEFAULT_HOPES);
 		clines.addAll(mycccam24.getLines());
 		
-		//INI - SEEMS TO DONT WORK
+		//FAILING AT 16/01/2016
 		FreeClinesScrapper shashatv = new Shashatv(DEFAULT_HOPES);
 		clines.addAll(shashatv.getLines());
 		
+		//FAILING AT 16/01/2016
 		FreeClinesScrapper cccamWorld = new CccamWorld(DEFAULT_HOPES);
 		clines.addAll(cccamWorld.getLines());
 		
+		//FAILING AT 16/01/2016
 		FreeClinesScrapper cgenerator = new Cgenerator(DEFAULT_HOPES);
 		clines.addAll(cgenerator.getLines());
-		//END - SEEMS TO DONT WORK
 		
 		FreeClinesScrapper bambooCCcam = new BambooCCcam(DEFAULT_HOPES);
 		clines.addAll(bambooCCcam.getLines());

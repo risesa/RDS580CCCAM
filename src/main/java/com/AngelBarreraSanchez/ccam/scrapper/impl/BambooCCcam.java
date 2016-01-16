@@ -1,12 +1,11 @@
 package com.AngelBarreraSanchez.ccam.scrapper.impl;
 
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.jsoup.Connection.Method;
 import org.jsoup.Connection.Response;
-import org.jsoup.helper.StringUtil;
 import org.jsoup.Jsoup;
 
 import com.AngelBarreraSanchez.ccam.CCCAMEntity;
@@ -30,16 +29,11 @@ public class BambooCCcam implements FreeClinesScrapper {
 		this.default_hops = default_hops;
 	}
 	
-	public static void main(String[] args) {
-		BambooCCcam b = new BambooCCcam();
-		b.getLines();
-	}
-	
 	/**
 	 * Implementation method
 	 */
-	public Set<CCCAMEntity> getLines() {
-		Set<CCCAMEntity> clines = new HashSet<CCCAMEntity>();
+	public List<CCCAMEntity> getLines() {
+		List<CCCAMEntity> clines = new ArrayList<CCCAMEntity>();
 		try {
 			
 			Response res = Jsoup.connect("http://151.80.128.35/js/contact_me.js")

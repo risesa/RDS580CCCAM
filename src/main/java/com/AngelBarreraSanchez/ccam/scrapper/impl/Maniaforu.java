@@ -1,7 +1,7 @@
 package com.AngelBarreraSanchez.ccam.scrapper.impl;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -31,8 +31,8 @@ public class Maniaforu implements FreeClinesScrapper {
 	/**
 	 * Implementation method
 	 */
-	public Set<CCCAMEntity> getLines() {
-		Set<CCCAMEntity> clines = new HashSet<CCCAMEntity>();
+	public List<CCCAMEntity> getLines() {
+		List<CCCAMEntity> clines = new ArrayList<CCCAMEntity>();
 		try {
 			final Document doc = Jsoup.connect(BASE_URL)
 					.data("user","RDS580"+System.currentTimeMillis())
