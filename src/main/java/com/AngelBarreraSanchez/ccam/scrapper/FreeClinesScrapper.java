@@ -1,6 +1,6 @@
 package com.AngelBarreraSanchez.ccam.scrapper;
 
-import java.util.Set;
+import java.util.List;
 
 import com.AngelBarreraSanchez.ccam.CCCAMEntity;
 
@@ -14,5 +14,5 @@ public interface FreeClinesScrapper {
 	 * Get the clines from a site
 	 * @return a set of clines
 	 */
-	Set<CCCAMEntity> getLines();
+	List<CCCAMEntity> getLines();
 }

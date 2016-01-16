@@ -2,7 +2,7 @@ package com.AngelBarreraSanchez.ccam.fileGenerator.impl;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Set;
+import java.util.List;
 
 import com.AngelBarreraSanchez.ccam.CCCAMEntity;
 import com.AngelBarreraSanchez.ccam.fileGenerator.CCCAMFileGenerator;
@@ -19,7 +19,7 @@ public class RDS580CCCAMFileGenerator implements CCCAMFileGenerator {
 	 * @param clines 
 	 * @param outputPath
 	 */ 
-	public void generateFile(final Set<CCCAMEntity> clines, String path) {
+	public void generateFile(final List<CCCAMEntity> clines, String path) {
 		String fecha = DateUtils.getFormattedActualDate("ddMMyyyy");
 		try {
 			FileWriter fw = new FileWriter(path);

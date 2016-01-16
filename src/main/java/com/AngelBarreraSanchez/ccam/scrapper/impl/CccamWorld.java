@@ -1,8 +1,8 @@
 package com.AngelBarreraSanchez.ccam.scrapper.impl;
 
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.jsoup.Connection.Method;
 import org.jsoup.Connection.Response;
@@ -32,8 +32,8 @@ public class CccamWorld implements FreeClinesScrapper {
 	/**
 	 * Implementation method
 	 */
-	public Set<CCCAMEntity> getLines() {
-		Set<CCCAMEntity> clines = new HashSet<CCCAMEntity>();
+	public List<CCCAMEntity> getLines() {
+		List<CCCAMEntity> clines = new ArrayList<CCCAMEntity>();
 		try {
 			Response res = Jsoup.connect(BASE_URL)
 				.data("user","RDS580"+System.currentTimeMillis())

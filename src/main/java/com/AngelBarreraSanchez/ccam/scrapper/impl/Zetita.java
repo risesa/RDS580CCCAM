@@ -1,7 +1,9 @@
 package com.AngelBarreraSanchez.ccam.scrapper.impl;
 
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.jsoup.Connection.Method;
@@ -32,8 +34,8 @@ public class Zetita implements FreeClinesScrapper {
 	/**
 	 * Implementation method
 	 */
-	public Set<CCCAMEntity> getLines() {
-		Set<CCCAMEntity> clines = new HashSet<CCCAMEntity>();
+	public List<CCCAMEntity> getLines() {
+		List<CCCAMEntity> clines = new ArrayList<CCCAMEntity>();
 		try {
 			Response res = Jsoup.connect(BASE_URL)
 				.data("user","RDS580"+System.currentTimeMillis())

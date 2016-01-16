@@ -1,7 +1,7 @@
 package com.AngelBarreraSanchez.ccam.fileGenerator;
 
 
-import java.util.Set;
+import java.util.List;
 
 import com.AngelBarreraSanchez.ccam.CCCAMEntity;
 
@@ -16,6 +16,6 @@ public interface CCCAMFileGenerator {
 	 * @param clines 
 	 * @param outputPath
 	 */ 
-	void generateFile(final Set<CCCAMEntity> clines, final String outputPath);
+	void generateFile(final List<CCCAMEntity> clines, final String outputPath);
 	
 }
