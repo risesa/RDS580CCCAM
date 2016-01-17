@@ -19,7 +19,6 @@ import com.AngelBarreraSanchez.ccam.scrapper.impl.Mycccam24;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.New0;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Sat2arab;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Shashatv;
-import com.AngelBarreraSanchez.ccam.scrapper.impl.Zetita;
 
 /**
  * The main class. 
@@ -61,30 +60,35 @@ public class RDS580Application {
 		clines.addAll(cccamgenerator.getLines());
 		
 		//IT CHANGES EVERY DAY THE URL
-		FreeClinesScrapper zetita = new Zetita(DEFAULT_HOPES);
-		clines.addAll(zetita.getLines());
+		//IN QUARENTINE
+//		FreeClinesScrapper zetita = new Zetita(DEFAULT_HOPES);
+//		clines.addAll(zetita.getLines());
 		
 		//FAILING AT 16/01/2016
 		FreeClinesScrapper mycccam24 = new Mycccam24(DEFAULT_HOPES);
 		clines.addAll(mycccam24.getLines());
 		
 		//FAILING AT 16/01/2016
-		FreeClinesScrapper shashatv = new Shashatv(DEFAULT_HOPES);
-		clines.addAll(shashatv.getLines());
+		//DOES NOT WORK - CHECK AGAIN ANOTHER DAY
+//		FreeClinesScrapper shashatv = new Shashatv(DEFAULT_HOPES);
+//		clines.addAll(shashatv.getLines());
 		
 		//FAILING AT 16/01/2016
-		FreeClinesScrapper cccamWorld = new CccamWorld(DEFAULT_HOPES);
-		clines.addAll(cccamWorld.getLines());
+		//DOES NOT WORK - CHECK AGAIN ANOTHER DAY
+//		FreeClinesScrapper cccamWorld = new CccamWorld(DEFAULT_HOPES);
+//		clines.addAll(cccamWorld.getLines());
 		
 		//FAILING AT 16/01/2016
-		FreeClinesScrapper cgenerator = new Cgenerator(DEFAULT_HOPES);
-		clines.addAll(cgenerator.getLines());
+		//DOES NOT WORK - CHECK AGAIN ANOTHER DAY
+//		FreeClinesScrapper cgenerator = new Cgenerator(DEFAULT_HOPES);
+//		clines.addAll(cgenerator.getLines());
 		
 		FreeClinesScrapper bambooCCcam = new BambooCCcam(DEFAULT_HOPES);
 		clines.addAll(bambooCCcam.getLines());
 		
-		FreeClinesScrapper sat2arab = new Sat2arab(DEFAULT_HOPES);
-		clines.addAll(sat2arab.getLines());
+		//DOES NOT WORK
+//		FreeClinesScrapper sat2arab = new Sat2arab(DEFAULT_HOPES);
+//		clines.addAll(sat2arab.getLines());
 		
 		CCCAMFileGenerator fileGen = new RDS580CCCAMFileGenerator();
 		fileGen.generateFile(clines, args[0]);
