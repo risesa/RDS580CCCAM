@@ -10,6 +10,7 @@ import com.AngelBarreraSanchez.ccam.fileGenerator.impl.RDS580CCCAMFileGenerator;
 import com.AngelBarreraSanchez.ccam.scrapper.FreeClinesScrapper;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.AllCccam;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.BambooCCcam;
+import com.AngelBarreraSanchez.ccam.scrapper.impl.CCcam4you;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Cccamgenerator;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.FC003;
 import com.AngelBarreraSanchez.ccam.scrapper.impl.Helala0;
@@ -85,6 +86,9 @@ public class RDS580Application {
 			//DOES NOT WORK
 //			FreeClinesScrapper sat2arab = new Sat2arab(DEFAULT_HOPES);
 //			clines.addAll(sat2arab.getLines());
+			
+			FreeClinesScrapper cccam4you  = new CCcam4you (DEFAULT_HOPES);
+			clines.addAll(cccam4you.getLines());
 			
 			CCCAMFileGenerator fileGen = null;
 			if(args.length==2 && args[1].equals("plain")){
